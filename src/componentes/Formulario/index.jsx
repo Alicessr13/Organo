@@ -15,16 +15,22 @@ const Formulario = () => {
         'Inovação e Gestão'
     ]
 
+    const aoSalvar = () => {
+        console.log('Form foi submetido');
+    }
+
+    //.children recebe o que tiver dentro do do buttons
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o cardo do colaborador</h2>
                 <CampoTexto label="Nome" placeholder="Digite seu nome"></CampoTexto>
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo"></CampoTexto>
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"></CampoTexto>
                 <ListaSuspensa label="Time:" itens={times} ></ListaSuspensa>
 
-                <Botao texto="Criar card"></Botao>
+                <Botao>Criar card</Botao>
             </form>
         </section>
     )

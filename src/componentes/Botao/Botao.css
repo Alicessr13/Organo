@@ -4,4 +4,12 @@
     font-weight: 700;
     font-size: 1.8rem;
     padding: 3.2rem;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 3.2rem;
+}
+
+.botao:hover{
+    color: #95ffd4;
 }
