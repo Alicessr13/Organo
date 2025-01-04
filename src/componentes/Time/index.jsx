@@ -7,7 +7,7 @@ const Time = (props) => {
 
     //renderização condicional em react
     return(
-        (props.colaboradores.length > 0) &&
+        (props.colaboradores.length > 0) ?
         <section className='time' style={{backgroundColor: props.corSecundaria}}>
             <h3 style={css}>
                 {props.nome}
@@ -19,6 +19,7 @@ const Time = (props) => {
                 )}
             </div>
         </section>
+        : ''
     )
 }
 

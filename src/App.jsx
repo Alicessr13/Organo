@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Banner from './componentes/Banner/Banner.jsx'
 import Formulario from './componentes/Formulario/index.jsx';
 import Time from './componentes/Time/index.jsx';
+import Rodape from './componentes/Rodape/index.jsx';
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
       {times.map(time => <Time ley={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} 
       colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}>
       </Time>)}
+      <Rodape></Rodape>
     </div>
   );
 }
