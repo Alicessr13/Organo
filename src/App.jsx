@@ -5,11 +5,11 @@ import Time from './componentes/Time/index.jsx';
 
 function App() {
 
-  const [colaboradores, setColaboradores] = useState('');
+  const [colaboradores, setColaboradores] = useState([]);
 
   const aoNovoColaboradorAdicionado =(colaborador) =>{
     console.log(colaborador);
-    setColaboradores([...colaboradores],colaborador);
+    setColaboradores([...colaboradores,colaborador]);
   }
 
   const times = [
@@ -55,7 +55,9 @@ function App() {
       <Banner></Banner>
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}></Formulario>
 
-      {times.map(time => <Time ley={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}></Time>)}
+      {times.map(time => <Time ley={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} 
+      colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}>
+      </Time>)}
     </div>
   );
 }

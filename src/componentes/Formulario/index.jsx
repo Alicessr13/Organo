@@ -20,6 +20,10 @@ const Formulario = (props) => {
             imagem: imagem,
             time: time
         })
+        setNome('');
+        setCargo('');
+        setImagem('');
+        setTime('');
     }
 
     //.children recebe o que tiver dentro do do buttons
